@@ -42,7 +42,7 @@ export class NinjasController {
   getNinjaById(@Param('id', ParseIntPipe) id: number) {
     try {
       return this.ninjasService.getNinjaById(id);
-    } catch () {
+    } catch (_error) {
       throw new NotFoundException();
     }
   }
